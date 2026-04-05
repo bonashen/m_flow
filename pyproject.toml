@@ -1,11 +1,11 @@
 # M-flow — Memory-augmented knowledge graph framework
 
 [project]
-name = "m_flow"
+name = "mflow-ai"
 version = "0.3.1"
 description = "M-flow builds semantic memory layers that help LLMs reason over your data with structured knowledge graphs."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 license = {text = "Apache-2.0"}
 authors = [
     {name = "Junting Hua"},
@@ -150,10 +150,9 @@ langchain = [
 ]
 llama-index = ["llama-index-core>=0.12.0,<0.13"]
 
-# Coreference resolution
-coreference = ["chinese-coref @ file:./coreference"]
+# Coreference resolution (install from source: pip install -e ./coreference)
+# Not available via PyPI — use source install for coreference support
 coreference-full = [
-    "chinese-coref @ file:./coreference",
     "spacy>=3.7.0,<4.0.0",
 ]
 
@@ -242,6 +241,10 @@ exclude = [
     "/profiling",
     "/scripts",
     "/tools",
+    "/.build-venv",
+    "/.venv",
+    "/coreference",
+    "/alembic",
 ]
 
 [tool.hatch.build.targets.wheel]

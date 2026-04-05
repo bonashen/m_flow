@@ -87,11 +87,18 @@ git clone https://github.com/FlowElement-ai/m_flow.git && cd m_flow
 
 The script checks your environment, configures API keys interactively, and starts the full stack (backend + frontend). On Windows, use `.\quickstart.ps1`.
 
-### Manual Install (pip)
+### Install via pip
 
 ```bash
-pip install m_flow          # or: uv pip install m_flow
+pip install mflow-ai         # or: uv pip install mflow-ai
 export LLM_API_KEY="sk-..."
+```
+
+### Install from Source
+
+```bash
+git clone https://github.com/FlowElement-ai/m_flow.git && cd m_flow
+pip install -e .             # editable install for development
 ```
 
 ### Run
