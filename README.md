@@ -50,7 +50,7 @@ Retrieval is **graph-routed**: the system casts a wide net across all levels, pr
 
 ## Benchmark
 
-Dataset: [LoCoMo-10](https://github.com/snap-stanford/locomo) (10 conversations, 1540 questions) · Judge LLM: gpt-4o-mini
+Dataset: [LoCoMo-10](https://github.com/snap-stanford/locomo) (10 conversations, 1540 questions) · Retrieval: EpisodicRetriever · Judge LLM: gpt-4o-mini
 
 | System | LLM-Judge | BLEU-1 | F1 |
 |--------|-----------|--------|-----|
@@ -63,6 +63,8 @@ Dataset: [LoCoMo-10](https://github.com/snap-stanford/locomo) (10 conversations,
 | Temporal reasoning | **78.8%** | 7.5% |
 | Multi-hop reasoning | 48.0% | 39.6% |
 | Open-domain (event detail) | **81.5%** | 49.1% |
+
+Evaluation scripts, methodology details, and reproduction steps: [mflow-benchmarks](https://github.com/FlowElement-ai/mflow-benchmarks/tree/main/benchmarks/locomo)
 
 ## Features
 
