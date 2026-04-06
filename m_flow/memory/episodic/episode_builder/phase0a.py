@@ -224,6 +224,7 @@ async def _task_generate_facets(
     prev_summary: str,
     enable_procedural_routing: bool,
     content_routing_disabled: bool = False,
+    config: Any = None,
 ) -> Tuple["EpisodicWriteDraft", List[Dict[str, Any]]]:
     """
     Generate facets via summarize_by_event.
@@ -522,6 +523,7 @@ async def execute_phase0a(ctx: EpisodeContext) -> Phase0AResult:
                 prev_summary=ctx.prev_summary,
                 enable_procedural_routing=ctx.config.enable_procedural_routing,
                 content_routing_disabled=ctx.config.content_routing_disabled,
+                config=ctx.config,
             ),
             _task_prepare_matcher(
                 state_facets=ctx.state.facets,
